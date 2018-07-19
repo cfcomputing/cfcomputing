@@ -1,0 +1,19 @@
+{
+  "name": "cfcomputing-server",
+  "version": "0.0.0",
+  "description": "this is it...the most flexible web application. Server written using nodejs at this point because I'm laxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfcomputing/cfcomputing.git"
+  },
+  "author": "Chris Feerick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cfcomputing/cfcomputing/issues"
+  },
+  "homepage": "https://github.com/cfcomputing/cfcomputing#readme"
+}
