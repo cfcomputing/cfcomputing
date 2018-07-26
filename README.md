@@ -17,7 +17,7 @@ Donating to EFF:                    https://eff.org/donate-le
 
 Thank you! https://www.nginx.com/
 
-Thank you! https://nodejs.org/
+Thank you! https://golang.org/
 
 Thank you! https://vuejs.org/
 
@@ -46,3 +46,15 @@ https://certbot.eff.org/lets-encrypt/centosrhel7-nginx
 For wildcard need this but didn't do it at this time
 
 `sudo certbot -a dns-plugin -i nginx -d "*.example.com" -d example.com --server https://acme-v02.api.letsencrypt.org/directory`
+
+```
+Helpful notes
+```
+
+When you mess up and commit something you shouldn't: https://help.github.com/articles/removing-sensitive-data-from-a-repository/
+
+Need to remember way the GOPATH variable works so when I move everything around or setup new checkout's etc I automate it so I'm working where I think I am
+
+go build
+go install
+go clean -i

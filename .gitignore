@@ -1,3 +1,8 @@
 # i think this is a comment in .gitignore
 # i do believe this will exclude all node_modules not matter what level they are...we will see when I get to it
 **/node_modules/
+**/github.com/
+**/golang.org/
+**/go/bin/
+**/go/pkg/
+**/_wrk/
