@@ -14,11 +14,12 @@ import (
 	"time"
 )
 
-func initServer() *http.Server {
-	port := flag.String("port", ":80", "http service address")
+var port = flag.String("port", ":80", "http service address")
+
+func initServer(port *string) *http.Server {
 	server := &http.Server{Addr: *port}
 
-	http.HandlerFunc("/", func(w http.ResponseWriter, req *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		io.WriteString(w, "Welcome to cfcomputing.com! Check back soon there is work being done\n")
 	})
 
@@ -30,7 +31,9 @@ func initServer() *http.Server {
 }
 
 func main() {
-	srv := initServer()
+	flag.Parse()
+	log.Print("*port is", *port)
+	srv := initServer(port)
 
 	// taken from https://golang.org/pkg/net/http/#Server.Shutdown && https://stackoverflow.com/questions/39320025/how-to-stop-http-listenandserve
 	idleConnsClosed := make(chan struct{})
